@@ -18,7 +18,7 @@ def scrape_table(jim):
     for row in rows:
         # Set up our data record - we'll need it later
         record = {}
-        table_cells = row.cssselect("TD")
+        table_cells = row.cssselect("p.ex1")
         if table_cells: 
             record['Racecourse'] = table_cells[0].text_content()
             record['Address and Phone Number'] = table_cells[1].text_content()
