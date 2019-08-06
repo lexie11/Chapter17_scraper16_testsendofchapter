@@ -41,5 +41,5 @@ def scrape_and_look_for_next_link(url):
 # call a function to scrape the first page in the series.
 # ---------------------------------------------------------------------------
 
-starting_url = 'http://www.ukjockey.com/racecourses.html2'
+starting_url = 'http://www.ukjockey.com/racecourses.html'
 scrape_and_look_for_next_link(starting_url)
