@@ -9,9 +9,9 @@ import urlparse
 import lxml.html
 
 # scrape_table function: gets passed an individual page to scrape
-def scrape_table(root):
+def scrape_table(jim):
 # define the function and call the parameter it will use (aka the cake "filling") as 'jim' - or any other name
-    rows = root.cssselect("TABLE TR")  # selects all <tr> blocks within <table class="Trolley table"> and puts in list variable 'rows'
+    rows = jim.cssselect("TABLE TR")  # selects all <tr> blocks within <table class="Trolley table"> and puts in list variable 'rows'
 # tell the function what it will do with 'jim'
 #     My guess is it knows to make a list variable because either 'cssselect' function has that written in or it does it automatically because there are multiple table rows
 # If a class name has a space in it, replace this with a . --> "Trolley table" > "Trolley.table"
@@ -25,7 +25,7 @@ def scrape_table(root):
             # Print out the data we've gathered
             print record, '------------'
             # Finally, save the record to the datastore - 'Artist' is our unique key
-            scraperwiki.sqlite.save(["Racecourse"], record)
+            scraperwiki.sqlite.save(["Address and Phone Number"], record)
         
 # # scrape_and_look_for_next_link function: calls the scrape_table function
 def scrape_and_look_for_next_link(url):
